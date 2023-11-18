@@ -4,6 +4,23 @@
 
 @import url('https://fonts.cdnfonts.com/css/usual');
 
+@layer base {
+  :root {
+    --text: #fffff5;
+    --background: #181b13;
+    --primary: #32856e;
+    --secondary: #e6e6e5;
+    --accent: #ee5f2b;
+  }
+  .dark {
+    --text: #0a0a00;
+    --background: #e9ece4;
+    --primary: #7acdb5;
+    --secondary: #1a1a19;
+    --accent: #d44511;
+  }
+}
+
 body {
   font-family: 'Usual', sans-serif;
 }
