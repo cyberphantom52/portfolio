@@ -9,6 +9,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+        /* @keyframes duration | easing-function | delay | name */
+        'slideout-0': '3s ease-in 0s open0',
+        'slideout-1': '2.5s ease-in 0.5s open0',
+        'slideout-2': '2s ease-in 1s open0',
+        'slideout-3': '1.5s ease-in 1.5s open0',
+        'slideout-4': '1s ease-in 2s open0',
+        'slideout-5': '0.5s ease-in 2.5s open0',
+      },
+      keyframes: {
+        open0: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
