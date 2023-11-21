@@ -1,8 +1,6 @@
 "use client";
-import type { Metadata } from 'next'
 import './globals.css'
-import LeftSidebar from './components/LeftSidebar'
-import RightSidebar from './components/RightSidebar'
+import {LeftSidebar, RightSidebar} from './components/Sidebar'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import FrozenRouter from './components/FrozenRouter';
