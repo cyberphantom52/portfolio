@@ -2,8 +2,7 @@
 import React from 'react'
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { useContext, useRef } from "react";
-import LeftSidebar from './LeftSidebar'
-import RightSidebar from './RightSidebar'
+import {LeftSidebar, RightSidebar} from './Sidebar'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
