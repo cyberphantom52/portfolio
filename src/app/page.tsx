@@ -9,7 +9,7 @@ export default function Home() {
         initial={{ rotate: 90, scale: 4 }}
         animate={{ rotate: 0, scale: 1}}
         exit={{ rotate: 90, scale: 4 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5, ease: [.06, .69, .51, .97]}}
         >
         <span className='font-bold'>CYBER</span>
         <HeroBanner />
