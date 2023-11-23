@@ -1,11 +1,6 @@
-// import type { Metadata } from 'next'
 "use client";
 import HeroBanner from "./components/HeroBanner"
 import {motion} from 'framer-motion'
-// export const metadata: Metadata = {
-//   title: 'Website',
-//   description: 'Good Website',
-// }
 
 export default function Home() {
   return (
