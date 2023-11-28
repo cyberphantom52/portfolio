@@ -4,15 +4,15 @@ import PageOpener from './PageOpener';
 const HeroBanner = () => {
   return (
     <div className='relative flex h-full bg-accent'>
-      <div className='flex flex-col h-full w-1/12 mr-[1%]'>
+      <div className='flex flex-col h-full w-[9.40%] pr-[0.82%]'>
         <div className='bg-[#f0d14b] h-1/2 w-full'/>
         <div className='flex h-1/2 w-full'>
-          <div className='bg-text h-full w-1/12 self-end mr-2'/>
+          <div className='bg-text h-full w-1/12 self-end mr-[8%]' />
           <div className='bg-text h-full w-1/6 self-end'/>
           <div className='bg-[#33856e] h-full w-1/4 self-end'/>
         </div>
       </div>
-      <div className='flex bg-[#33856e] h-full w-[23.8%] place-content-end mr-[1.6%]'>
+      <div className='flex bg-[#33856e] h-full w-[24%] place-content-end'>
         <div 
           className='bg-[#f0d14b] h-full w-[18%] self-end'
           style=
@@ -23,12 +23,13 @@ const HeroBanner = () => {
           }
         />
       </div>
-      <div className='bg-white h-full w-[0.4%]'/>
-      <div className='bg-[#33856e] h-full w-[1.2%]'/>
-      <div className='bg-white h-full w-[0.7%] mr-[3.4%]'/>
-      <div className='w-[12.1%] h-full'>
-        <PageOpener />
+      <div className='flex h-full w-[7.3%] ps-[1.7%]'>
+        <div className='bg-white h-full w-[3.48%]' />
+        <div className='bg-[#33856e] h-full w-[16.08%]' />
+        <div className='bg-white h-full w-[10.32%]' />
       </div>
+      <div className='bg-[#f0d14b] w-[13%] h-[80%]' />
+      <PageOpener className='absolute bg-[#f0d14b] h-full w-[5.6%] left-1/2 -translate-x-1/2' />
       <div className='relative w-[17.6%] h-full'>
         <div className='absolute flex flex-col h-full w-[76.5%] justify-between'>
           <div className='w-[33.3%] h-[3.6%] translate-x-[100%]'
@@ -85,7 +86,8 @@ const HeroBanner = () => {
       </div>
       <div className='flex flex-col w-[14%] h-full justify-end'>
         <div className='flex w-full h-[14.5%] self-end justify-between'>
-          <div className='flex w-1/2 h-full'>
+          <div className='relative flex w-1/2 h-full'>
+            <div className='absolute w-[34%] h-[34%] bg-[#f0d14b] self-end -translate-x-full'/>
             <div className='w-[34%] h-[34%] bg-white self-end'/>
           </div>
           <div className='w-1/2 h-full bg-[#f0d14b]'/>
