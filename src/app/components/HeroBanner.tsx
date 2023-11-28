@@ -1,8 +1,9 @@
 import React from 'react'
+import PageOpener from './PageOpener';
 
 const HeroBanner = () => {
   return (
-    <div className='flex h-full bg-accent'>
+    <div className='relative flex h-full bg-accent'>
       <div className='flex flex-col h-full w-1/12 mr-[1%]'>
         <div className='bg-[#f0d14b] h-1/2 w-full'/>
         <div className='flex h-1/2 w-full'>
@@ -25,9 +26,8 @@ const HeroBanner = () => {
       <div className='bg-white h-full w-[0.4%]'/>
       <div className='bg-[#33856e] h-full w-[1.2%]'/>
       <div className='bg-white h-full w-[0.7%] mr-[3.4%]'/>
-      <div className='flex w-[12.1%] h-full'>
-        <div className='bg-[#f0d14b] h-[80%] w-[60%]'/>
-        <div className='bg-[#f0d14b] h-full w-[40%]'/>
+      <div className='w-[12.1%] h-full'>
+        <PageOpener />
       </div>
       <div className='relative w-[17.6%] h-full'>
         <div className='absolute flex flex-col h-full w-[76.5%] justify-between'>
