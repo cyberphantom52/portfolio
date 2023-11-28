@@ -21,6 +21,9 @@ const config: Config = {
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
        },
+       fontFamily: {
+        'usual': ['Usual', 'sans-serif']
+      },
     },
   },
   plugins: [
