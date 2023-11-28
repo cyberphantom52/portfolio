@@ -2,22 +2,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+const ease = [.52, .28, .46, .99]
 const container = {
   animate: {
     width: '0%',
     transition: {
-      duration: 1.66,
-      ease: [.52, .28, .46, .99],
+      duration: 1,
       staggerChildren: 0.1,
-      staggerDirection: -1
+      staggerDirection: -1,
+      ease: ease
     }
   },
   exit: {
     width: '50%',
     transition: {
-      duration: 1.66,
-      ease: [.52, .28, .46, .99],
-      staggerChildren: 0.1
+      duration: 1,
+      staggerChildren: 0.1,
+      ease: ease
     }
   }
 }
@@ -27,14 +28,14 @@ const item = {
     x: '0%',
     transition: {
       duration: 0.66,
-      ease: [.52, .28, .46, .99]
+      ease: ease
     }
   },
   exit: {
     x: '150%',
     transition: {
       duration: 0.66,
-      ease: [.52, .28, .46, .99]
+      ease: ease
     }
   }
 }
@@ -86,21 +87,20 @@ const Opener = ({
   )
 }
 
-const PageOpener = () => {
+type Props = {
+  className?: string
+}
+const PageOpener: React.FC<Props> = (props) => {
   return (
-    <div className='flex w-full h-full justify-between'>
-      <div className='bg-[#f0d14b] h-[80%] w-full' />
-      <motion.div
-        className='z-10 absolute bg-[#f0d14b] h-full w-[5%] ml-[7%] flex justify-center'
-        initial={{ marginRight: '-15%', marginLeft: '-12%', width: '43%' }}
-        animate={{ marginRight: '0%', marginLeft: '7%', width: '5%' }}
-        exit={{ marginRight: '-15%', marginLeft: '-12%', width: '43%' }}
-        transition={{ duration: 1.66, ease: [.52, .28, .46, .99] }}
-      >
-        <Opener invert={false} />
-        <Opener invert={true} />
-      </motion.div>
-    </div>
+    <motion.div className={`${props.className} flex justify-center z-10`}
+      initial={{ width: '50%' }}
+      animate={{ width: '5.6%' }}
+      exit={{ width: '50%' }}
+      transition={{ duration: 1.66, ease: ease }}
+    >
+      <Opener invert={false} />
+      <Opener invert={true} />
+    </motion.div>
   )
 }
 
