@@ -27,14 +27,14 @@ export default function LayoutWrapper({
   children: React.ReactNode
 }) {
   const segment = useSelectedLayoutSegment();
-  
+
   return (
     <AnimatePresence mode='wait' initial={false}>
       <motion.div
         className='flex w-screen h-screen'
         key={segment}
       >
-        <Sidebar className='absolute flex justify-between h-screen w-screen'/>
+        <Sidebar className='absolute flex justify-between h-screen w-screen' />
         <FrozenRouter>{children}</FrozenRouter>
       </motion.div>
     </AnimatePresence>
