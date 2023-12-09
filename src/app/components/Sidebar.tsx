@@ -8,17 +8,9 @@ function LeftSidebar({
 }) {
   return (
     <div className={`${className} flex vertical-writing-lr py-5 z-10 place-content-between place-items-center`}>
-      <span className="rotate-180">
-        <Link href="/">HOME</Link>
-      </span>
-      <span className="rotate-180">
-        <Link href="/about">W</Link>
-      </span>
-      <div className="rotate-180">
-        <Link href="https://github.com/cyberphantom52/">GitHub</Link>
-        <span> . </span>
-        <Link href="https://gitlab.com/cyberphantom52/">GitLab</Link>
-      </div>
+      <Link href="/" className="rotate-180">HOME</Link>
+      <span className="rotate-180">W</span>
+      <span className='rotate-180'>CONTACT</span>
     </div>
   )
 }
@@ -30,9 +22,9 @@ function RightSidebar({
 }) {
   return (
     <div className={`${className} flex vertical-writing-lr py-5 z-10 place-content-between place-items-center`}>
-      <div>CONTACT</div>
+      <Link href="https://github.com/cyberphantom52/">GitHub</Link>
       <div>=</div>
-      <div>PHANTOM</div>
+      <Link href="https://gitlab.com/cyberphantom52/">GitLab</Link>
     </div>
   )
 }
