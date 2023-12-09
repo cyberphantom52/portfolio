@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className='font-usual'>
+    <html lang="en">
       <body>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
