@@ -15,7 +15,7 @@ export default function Home() {
         <HeroBanner />
         <div className="flex justify-between">
           <span className='transition-{text} duration-500 text-[#4c4f48] font-bold text-lg sm:text-3xl lg:text-4xl self-center'>Will You Find Out?</span>
-          <span className='transition-{text} duration-500  text-accent font-bold text-lg sm:text-4xl md:text-5xl lg:text-7xl'>PHANTOM</span>
+          <span className='transition-{text} duration-500  text-primary font-bold text-lg sm:text-4xl md:text-5xl lg:text-7xl'>PHANTOM</span>
         </div>
       </motion.div>
     </main>
