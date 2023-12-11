@@ -2,7 +2,7 @@
 import React from 'react'
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { useContext, useRef } from "react";
-import Sidebar from './Sidebar'
+import { LeftSidebar, RightSidebar } from './Sidebar'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
@@ -34,7 +34,8 @@ export default function LayoutWrapper({
         className='flex w-screen h-screen'
         key={segment}
       >
-        <Sidebar className='absolute flex justify-between h-screen w-screen' />
+        <LeftSidebar className='absolute left-0'/>
+        <RightSidebar className='absolute right-0' />
         <FrozenRouter>{children}</FrozenRouter>
       </motion.div>
     </AnimatePresence>
