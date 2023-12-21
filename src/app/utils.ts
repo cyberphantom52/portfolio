@@ -52,6 +52,7 @@ export async function getBlogsMeta(): Promise<BlogMeta[] | undefined> {
     .filter(blog => blog.name.endsWith('.mdx'))
     .map(blog => blog.name)
 
+  if (blogs.length === 0)return undefined
   const blogPosts = []
 
   for (const name of blogs) {
