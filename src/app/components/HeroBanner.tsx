@@ -38,7 +38,7 @@ const HeroBanner = () => {
           <Link href="/abouts" className='h-full w-full absolute'>
             <span className='top-[82%] left-[95%] absolute -translate-x-full vertical-writing-lr'>ABOUT</span>
           </Link>
-          <Link href="/about" className='absolute bg-accent w-2/3 h-4/5 left-full -translate-x-full'>
+          <Link href="/blogs" className='absolute bg-accent w-2/3 h-4/5 left-full -translate-x-full'>
             <span className='bottom-[7.5%] left-[5%] absolute'>BLOGS</span>
           </Link>
         </div>
