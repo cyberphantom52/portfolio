@@ -49,7 +49,7 @@ export default async function Post({ params: { blog } }: Props) {
                 {metadata.date}
             </p>
             <br />
-            <article>
+            <article className="prose lg:prose-xl">
                 {content}
             </article>
             <br />
