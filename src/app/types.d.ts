@@ -1,6 +1,7 @@
 type Frontmatter = {
   title: string
   date: string
+  description: string
   tags: string[]
 }
 
