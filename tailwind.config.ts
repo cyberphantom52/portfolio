@@ -27,6 +27,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     plugin(function ({ addUtilities }) {
       addUtilities({
         // https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
