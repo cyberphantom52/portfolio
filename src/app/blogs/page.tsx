@@ -32,7 +32,7 @@ export default async function Blogs() {
               default:
                 cardClass += "bg-accent"
             }
-            return <BlogCard key={index} cardClass={cardClass} titleClass={titleClass} descriptionClass={descriptionClass}  id={blog.id} />
+            return <BlogCard key={index} cardClass={cardClass} titleClass={titleClass} descriptionClass={descriptionClass}  metadata={blog} />
           })
         }
       </div>
