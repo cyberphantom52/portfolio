@@ -6,13 +6,13 @@ export async function generateStaticParams() {
   if (!posts) return []
 
   return posts.map((post) => ({
-      blog: post.id
+    blog: post.id
   }))
 }
 
 type Props = {
   params: {
-      blog: string
+    blog: string
   }
 }
 
@@ -21,13 +21,13 @@ export async function generateMetadata({ params: { blog } }: Props) {
   const post = await getBlogByName(`${blog}.mdx`) //deduped!
 
   if (!post) {
-      return {
-          title: 'Post Not Found'
-      }
+    return {
+      title: 'Post Not Found'
+    }
   }
 
   return {
-      title: post.metadata.title,
+    title: post.metadata.title,
   }
 }
 
@@ -36,25 +36,19 @@ export default async function Post({ params: { blog } }: Props) {
   const post = await getBlogByName(`${blog}.mdx`)
 
   if (!post) {
-      return <div>Post Not Found</div>
+    return <div>Post Not Found</div>
   }
 
   const { metadata, content } = post
 
   return (
-      <div className="flex flex-col bg-secondary h-full w-full">
-          <div className="mx-[5%]">
-            <h2 className="font-bold text-6xl mt-4 mb-0">{metadata.title}</h2>
-            <p className="text-base">
-                {metadata.date}
-            </p>
-            <br />
-            <article className="prose lg:prose-xl">
-                {content}
-            </article>
-            <br />
-          </div>
-
+    <div className="bg-background w-screen text-text">
+      <div className="h-screen flex flex-col overflow-y-scroll mx-[5%] place-items-center">
+        <h2 className="font-bold text-6xl mt-4 mb-0 uppercase">{metadata.title}</h2>
+        <article className="prose lg:prose-xl p-6">
+          {content}
+        </article>
       </div>
+    </div>
   )
 }
