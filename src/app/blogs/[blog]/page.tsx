@@ -45,7 +45,7 @@ export default async function Post({ params: { blog } }: Props) {
     <div className="bg-background w-screen text-text">
       <div className="h-screen flex flex-col overflow-y-scroll mx-[5%] place-items-center">
         <h2 className="font-bold text-6xl mt-4 mb-0 uppercase">{metadata.title}</h2>
-        <article className="prose lg:prose-xl p-6">
+        <article className="prose dark:prose-invert lg:prose-xl p-6">
           {content}
         </article>
       </div>
