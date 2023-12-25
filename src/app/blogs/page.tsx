@@ -13,7 +13,7 @@ export default async function Blogs() {
   }
 
   return (
-    <div className="bg-secondary w-screen overflow-scroll">
+    <div className="bg-background w-screen overflow-scroll">
       <div className="grid grid-cols-1 md:grid-cols-4 grid-flow-row auto-rows-[8rem] md:auto-rows-[15rem] min-h-full p-6 gap-4 md:gap-8 mx-[5%]">
         {
           blogs.map((blog, index) => {
@@ -22,12 +22,12 @@ export default async function Blogs() {
             let descriptionClass = "text-lg";
             switch (index) {
               case 0:
-                cardClass += "md:row-span-2 md:col-span-2 bg-primary"
+                cardClass += "md:row-span-2 md:col-span-2 bg-[#01aa89]"
                 titleClass += "md:text-4xl md:line-clamp-3"
                 break;
               case 1:
               case 3:
-                cardClass += "md:row-span-2 md:col-span-1 bg-text"
+                cardClass += "md:row-span-2 md:col-span-1 bg-indigo-200 dark:bg-[#abaddd]"
                 break;
               default:
                 cardClass += "bg-accent"
