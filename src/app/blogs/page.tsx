@@ -13,26 +13,20 @@ export default async function Blogs() {
   }
 
   return (
-    <div className="bg-background w-screen overflow-scroll">
+    <div className="bg-background w-screen overflow-auto">
       <div className="grid grid-cols-1 md:grid-cols-4 grid-flow-row auto-rows-[8rem] md:auto-rows-[15rem] min-h-full p-6 gap-4 md:gap-8 mx-[5%]">
         {
-          blogs.map((blog, index) => {
-            let cardClass = "row-span-1 col-span-1 ";
-            let titleClass = "font-bold text-xl line-clamp-2 ";
+          [...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs, ...blogs].map((blog, index) => {
+            let className = "backdrop-blur-[4px] border border-black border-opacity-20 dark:border-white dark:border-opacity-10 dark:hover:border-opacity-25 ";
+            let titleClass = "capitalize font-bold text-xl line-clamp-2 ";
             let descriptionClass = "text-lg";
-            switch (index) {
-              case 0:
-                cardClass += "md:row-span-2 md:col-span-2 bg-[#01aa89]"
+            if (index == 0) {
+                className += "md:row-span-2 md:col-span-2 bg-[#0071E3] bg-opacity-30 dark:bg-[#1277de] dark:bg-opacity-30"
                 titleClass += "md:text-4xl md:line-clamp-3"
-                break;
-              case 1:
-              case 3:
-                cardClass += "md:row-span-2 md:col-span-1 bg-indigo-200 dark:bg-[#abaddd]"
-                break;
-              default:
-                cardClass += "bg-accent"
+            } else {
+              className += "bg-[#c8a489] bg-opacity-5 dark:bg-white dark:bg-opacity-10"
             }
-            return <BlogCard key={index} cardClass={cardClass} titleClass={titleClass} descriptionClass={descriptionClass}  metadata={blog} />
+            return <BlogCard key={index} cardClass={className} titleClass={titleClass} descriptionClass={descriptionClass}  metadata={blog} />
           })
         }
       </div>
