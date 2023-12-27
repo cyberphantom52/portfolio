@@ -28,7 +28,7 @@ const config: Config = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    plugin(function ({ addUtilities }) {
+    plugin(function ({ addUtilities, matchUtilities }) {
       addUtilities({
         // https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
         ".horizontal-writing-tb": { "writing-mode": "horizontal-tb" },
@@ -40,7 +40,12 @@ const config: Config = {
         ".orientation-sideways-right": { "text-orientation": "sideways-right" },
         ".orientation-sideways": { "text-orientation": "sideways" },
         ".orientation-glyph": { "text-orientation": "use-glyph-orientation" },
-      });
+      })
+      matchUtilities({
+        "text-stroke": (value) => {
+          return { "-webkit-text-stroke": value, "text-stroke": value };
+        }
+      })
     }),
   ],
   darkMode: 'class',
