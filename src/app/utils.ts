@@ -7,7 +7,7 @@ type BlogInfo = {
 }
 
 export async function getBlogByName(name: string): Promise<BlogPost | undefined> {
-  const result = await fetch(`https://raw.githubusercontent.com/${process.env.REPOSITORY}/${process.env.BRANCH}/src/app/blogs/${name}`, {
+  const result = await fetch(`https://raw.githubusercontent.com/${process.env.REPOSITORY}/${process.env.BRANCH}${process.env.DIRECTORY}/${name}`, {
     headers: {
       Accept: 'application/vnd.github+json',
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -36,7 +36,7 @@ export async function getBlogByName(name: string): Promise<BlogPost | undefined>
 }
 
 export async function getBlogsMeta(): Promise<BlogMeta[] | undefined> {
-  const result = await fetch(`https://api.github.com/repos/${process.env.REPOSITORY}/contents/src/app/blogs?ref=${process.env.BRANCH}`, {
+  const result = await fetch(`https://api.github.com/repos/${process.env.REPOSITORY}/contents${process.env.DIRECTORY}?ref=${process.env.BRANCH}`, {
     headers: {
       Accept: 'application/vnd.github+json',
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
