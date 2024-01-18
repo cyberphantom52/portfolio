@@ -7,7 +7,7 @@ type SidebarProps = {
 
 export function Sidebar({ className, elements }: SidebarProps) {
   return (
-    <div className={`${className} h-full w-16 lg:w-20 p-4 flex justify-between items-center vertical-writing-lr text-text font-bold pointer-events-none`}>
+    <div className={`${className} h-full w-16 lg:w-20 p-4 flex justify-between items-center vertical-writing-lr font-bold pointer-events-none`}>
       {elements}
     </div>
   );

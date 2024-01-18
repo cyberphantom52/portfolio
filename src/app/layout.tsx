@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark bg-background text-text">
       <body>
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

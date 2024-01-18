@@ -13,7 +13,7 @@ export default async function Blogs() {
   }
 
   return (
-    <div className="flex justify-center bg-background w-full overflow-y-scroll">
+    <div className="flex justify-center w-full overflow-y-scroll">
       <div className="grid grid-cols-1 md:grid-cols-3 grid-flow-row auto-rows-[10rem] md:auto-rows-[18rem] m-8 md:mx-20 max-w-4xl gap-4 md:gap-8">
         {
           blogs.map((blog, index) => {

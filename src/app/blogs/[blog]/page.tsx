@@ -42,7 +42,7 @@ export default async function Post({ params: { blog } }: Props) {
   const { metadata, content } = post
 
   return (
-    <div className="bg-background w-screen text-text">
+    <div className="w-screen">
       <div className="h-screen flex flex-col overflow-y-scroll place-items-center">
         <article className="prose dark:prose-invert lg:prose-xl p-6">
           <h1 className="uppercase">{metadata.title}</h1>
