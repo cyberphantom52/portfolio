@@ -38,7 +38,7 @@ export default function LayoutWrapper({
 
   const rightSidebarElements = [
     <Link href="https://github.com/cyberphantom52/" className='pointer-events-auto'>GitHub</Link>,
-    <ThemeToggle className="w-1/2 pointer-events-auto"/>,
+    <ThemeToggle className="pointer-events-auto"/>,
     <Link href="https://gitlab.com/cyberphantom52/" className='pointer-events-auto'>GitLab</Link>
   ];
 

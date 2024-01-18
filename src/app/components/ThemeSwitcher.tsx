@@ -19,7 +19,7 @@ function ThemeToggle({
     <motion.button
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9, rotate: 180 }}
-      className={`${className} aspect-square place-content-center flex`}
+      className={`${className} aspect-square w-full`}
     >
       <svg
         viewBox="0 0 24 24"
