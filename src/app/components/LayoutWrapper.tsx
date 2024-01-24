@@ -45,7 +45,7 @@ export default function LayoutWrapper({
   return (
     <AnimatePresence mode='wait' initial={false}>
       <motion.div
-        className='flex w-screen h-screen'
+        className='flex w-screen h-screen overflow-y-scroll'
         key={segment}
       >
         <FrozenRouter>{children}</FrozenRouter>
