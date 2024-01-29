@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { metadata } from '../layout'
 
 type Props = {
   cardClass?: string
@@ -11,11 +12,16 @@ type Props = {
 const BlogCard: React.FC<Props> = async (props) => {
 
   return (
-    <Link href={`/blogs/${props.metadata.id}`} className={`${props.cardClass} rounded-2xl flex flex-col p-6 overflow-hidden dark:text-text hover:scale-105 transition-transform duration-75 ease-out`}>
-      <h1 className={`${props.titleClass}`}>{props.metadata.title}</h1>
-      <span className='italic'>{props.metadata.date}</span>
-      <hr className="hidden md:block border-t-2 border-black dark:border-white my-2" />
-      <p className={`${props.descriptionClass} flex-1 overflow-hidden columns-1`}>{props.metadata.description}</p>
+    <Link href={`/blogs/${props.metadata.id}`} className={`rounded-xl p-7 ${props.cardClass}`}>
+      <div className="flex flex-col gap-5 overflow-hidden">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-[27px] font-extrabold leading-tight capitalize">{props.metadata.title}</h2>
+          <span className="text-2xl leading-7">{props.metadata.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        </div>
+        <div className="h-full text-2xl leading-7 line-clamp-[10]">
+          <p>{props.metadata.description}</p>
+        </div>
+      </div>
     </Link>
   )
 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const HeroBanner = () => {
   return (
-    <div className='flex h-full bg-primary relative justify-between font-semibold'>
+    <div className='flex h-full bg-primary relative justify-between font-semibold text-black'>
       {/* Left Half */}
       <div className='w-[47.5%] flex'>
         {/* First */}
