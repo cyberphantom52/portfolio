@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { metadata } from '../layout'
 
 type Props = {
   cardClass?: string
@@ -11,12 +12,16 @@ type Props = {
 const BlogCard: React.FC<Props> = async (props) => {
 
   return (
-    <Link href={`/blogs/${props.metadata.id}`} className={`rounded-xl p-7 bg-black flex flex-col gap-5 overflow-hidden ${props.cardClass} hover:scale-105 transition-transform duration-75 ease-out`}>
-      <div className='flex flex-col gap-2 font-extrabold'>
-        <h2 className={`${props.titleClass}`}>{props.metadata.title}</h2>
-        <span className='text-white'>January 24, 2023</span>
+    <Link href={`/blogs/${props.metadata.id}`} className={`rounded-xl p-7 ${props.cardClass}`}>
+      <div className="flex flex-col gap-5 overflow-hidden">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-[27px] font-extrabold leading-tight capitalize">{props.metadata.title}</h2>
+          <span className="text-2xl leading-7">{props.metadata.date}</span>
+        </div>
+        <div className="h-full text-2xl leading-7 line-clamp-[10]">
+          <p>{props.metadata.description}</p>
+        </div>
       </div>
-      <p className={`${props.descriptionClass}`}>{props.metadata.description}</p>
     </Link>
   )
 }
