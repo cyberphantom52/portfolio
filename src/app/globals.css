@@ -20,3 +20,19 @@
     --accent: #f0d04c;
   }
 }
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  display: none;
+}
