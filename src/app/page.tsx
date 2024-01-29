@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <main className='flex w-screen justify-center'>
+    <main className='flex w-screen justify-center overflow-hidden'>
       <motion.div className="flex flex-col w-3/4 h-3/4 self-center"
         initial={{ rotate: 90, scale: 5 }}
         animate={{ rotate: 0, scale: 1 }}
