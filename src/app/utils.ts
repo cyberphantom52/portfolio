@@ -6,6 +6,12 @@ type BlogInfo = {
   download_url: string
 }
 
+// name format: DD-MM-YY-title.mdx
+function getDateFromName(name: string): Date {
+  const date = name.split('-').slice(0, 3).join('-')
+  return new Date(date)
+}
+
 export async function getBlogByName(name: string): Promise<BlogPost | undefined> {
   const result = await fetch(`https://raw.githubusercontent.com/${process.env.REPOSITORY}/${process.env.BRANCH}${process.env.DIRECTORY}/${name}`, {
     headers: {
@@ -28,9 +34,10 @@ export async function getBlogByName(name: string): Promise<BlogPost | undefined>
     }
   })
 
+  const date = getDateFromName(name)
   const id = name.replace('.mdx', '')
 
-  const blogPost: BlogPost = { metadata: { id, ...frontmatter }, content }
+  const blogPost: BlogPost = { metadata: { id, date, ...frontmatter }, content }
 
   return blogPost
 }

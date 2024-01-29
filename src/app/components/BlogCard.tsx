@@ -16,7 +16,7 @@ const BlogCard: React.FC<Props> = async (props) => {
       <div className="flex flex-col gap-5 overflow-hidden">
         <div className="flex flex-col gap-2">
           <h2 className="text-[27px] font-extrabold leading-tight capitalize">{props.metadata.title}</h2>
-          <span className="text-2xl leading-7">{props.metadata.date}</span>
+          <span className="text-2xl leading-7">{props.metadata.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
         <div className="h-full text-2xl leading-7 line-clamp-[10]">
           <p>{props.metadata.description}</p>

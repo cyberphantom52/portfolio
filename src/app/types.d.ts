@@ -1,12 +1,12 @@
 type Frontmatter = {
   title: string
-  date: string
   description: string
   tags: string[]
 }
 
 type BlogMeta = Frontmatter & {
   id: string
+  date: Date
 }
 
 type BlogPost = {
